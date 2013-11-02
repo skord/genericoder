@@ -1,0 +1,48 @@
+h1 Cheap Geolocation.
+
+p Query by address or latlng. Paginate through them. Other stuff.
+
+p This just uses locality information scraped from around the web. It's not very accurate, but I've found most times, I don't need street level geolocation.
+
+p The granularity of the data goes down to the postal code level, so include it if you can. Countries that don't have postal codes are included, but they need to get with the times already.
+
+p All calls are GET's. If you need to POST for geo data, you have a data problem.
+
+.ui.segment.blue
+  h3 By Address
+
+  .ui.segment.green
+    h5 Usage:
+    p= "/locations.json?address=address_params"
+
+  .ui.segment.purple
+    h5 Examples:
+    =link_to "/locations.json?address=Columbus%20OH", locations_path(format: :json, address: 'Columbus OH')
+
+    p Or more specific...
+
+    =link_to "/locations.json?address=Columbus+OH%2C+43212", locations_path(format: :json, address: 'Columbus OH, 43212')
+
+.ui.segment.blue
+  h3 By LatLng
+
+  .ui.segment.green
+    h5 Usage:
+    p You'll need both a search radius and latlng coords.
+
+    p= "/locations.json?lntlng=lat,lng&radius=radius"
+
+  .ui.segment.purple
+    h5 Example:
+    = link_to "/locations.json?latlng=39.9583,-82.9622&radius=50", locations_path(format: :json, latlng: "39.9583,-82.9622", radius: "50")
+
+.ui.segment.blue
+  h3 Pagination
+
+  .ui.segment.green
+    h5 Usage
+    p Just add the page param to to the query.
+
+  .ui.segment.purple
+    =link_to "/locations.json?address=Columbus%20OH&page=2", locations_path(format: :json, address: 'Columbus OH', page: "2")
+
