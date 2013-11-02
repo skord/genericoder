@@ -34,12 +34,8 @@ end
 
 gem 'foreman'
 gem 'thin'
-gem 'dalli'
-gem 'kaminari'
 gem 'slim-rails'
-gem 'devise'
 gem 'semantic-ui-sass'
-gem 'doorkeeper', '~> 0.7.0'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 
