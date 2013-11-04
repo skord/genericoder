@@ -36,8 +36,8 @@ gem 'foreman'
 gem 'thin'
 gem 'slim-rails'
 gem 'semantic-ui-sass'
-gem 'sunspot_rails'
-gem 'sunspot_solr'
+gem 'sunspot_rails', '~> 2.1.0'
+gem 'sunspot_solr', '~> 2.1.0'
 
 group :test, :development do
   gem 'capybara'
