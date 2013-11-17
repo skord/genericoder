@@ -14,5 +14,4 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/solr/index
-/solr/spellchecker
+/solr

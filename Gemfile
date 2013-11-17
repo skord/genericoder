@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'activerecord-jdbcpostgresql-adapter'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'therubyrhino', platforms: :jruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -33,7 +34,7 @@ group :doc do
 end
 
 gem 'foreman'
-gem 'thin'
+gem 'puma'
 gem 'slim-rails'
 gem 'semantic-ui-sass'
 gem 'sunspot_rails', '~> 2.1.0'
@@ -49,7 +50,7 @@ end
 
 group :development do
   gem 'better_errors'
-  gem 'binding_of_caller'
+  # gem 'binding_of_caller'
   gem 'progress_bar'
 end
 
